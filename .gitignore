@@ -1,0 +1,11 @@
+.classpath
+.gradle
+.project
+.settings
+bin
+build
+data
+gradle
+gradlew
+gradlew.bat
+.fuse*
