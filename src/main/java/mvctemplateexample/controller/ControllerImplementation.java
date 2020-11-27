@@ -3,7 +3,6 @@ package mvctemplateexample.controller;
 import java.io.IOException;
 import java.util.List;
 
-import dicerollerlistexecutor.controller.ControllerImplementation;
 import mvctemplate.controller.Controller;
 import mvctemplate.dao.DAO;
 import mvctemplate.dao.ObjectStreamDAO;
@@ -110,6 +109,7 @@ public class ControllerImplementation {
 				view.messageToUser(e.toString());
 				return; 
 			}
+			view.dispose();
 			System.exit(0);
 		}
 	}

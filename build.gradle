@@ -23,12 +23,14 @@ dependencies {
     
     // This dependency is used internally, and not exposed to consumers on their own compile classpath.
     implementation 'com.google.guava:guava:23.0'
+    compile 'org.apache.logging.log4j:log4j-api:2.0'
+	compile 'org.apache.logging.log4j:log4j-core:2.0'
 
     // Use JUnit test framework
     testImplementation 'junit:junit:4.12'
     
     implementation files('lib/util-1.12.jar')
-    implementation files('lib/MVCTemplate-R15.jar')
+    implementation files('lib/MVCTemplate-R16.jar')
 }
 
 test {
