@@ -27,8 +27,8 @@ dependencies {
     // Use JUnit test framework
     testImplementation 'junit:junit:4.12'
     
-    implementation files('lib/util-1.0.jar')
-    implementation files('lib/MVCTemplateR10.jar')
+    implementation files('lib/util-1.12.jar')
+    implementation files('lib/MVCTemplate-R15.jar')
 }
 
 test {

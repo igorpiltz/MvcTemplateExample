@@ -3,11 +3,13 @@ package mvctemplateexample.controller;
 import java.io.IOException;
 import java.util.List;
 
+import dicerollerlistexecutor.controller.ControllerImplementation;
 import mvctemplate.controller.Controller;
 import mvctemplate.dao.DAO;
 import mvctemplate.dao.ObjectStreamDAO;
 import mvctemplateexample.model.Model;
 import mvctemplate.view.CommandLineView;
+import mvctemplate.view.SwingView;
 import mvctemplate.view.View;
 import mvctemplateexample.model.Game;
 import util.parser.Callable;
@@ -116,14 +118,14 @@ public class ControllerImplementation {
 	public static void main(String args[]) throws IOException, ClassNotFoundException {
 		
 		Controller controller = null;
-		View view = new CommandLineView();
+		View view = new SwingView();
 		
 		
 		controller = new Controller(new ObjectStreamDAO(), view);
 		
 		ControllerImplementation controllerImplementation = new ControllerImplementation(controller);
 			
-		
+		view.initialize();
 		controllerImplementation.run();
 		
 	}
@@ -145,10 +147,8 @@ public class ControllerImplementation {
 				try {
 					controller.processInput(command);
 				} catch (UnknownCommandException e) {
-					// TODO Auto-generated catch block
 					e.printStackTrace();
 				} catch (UserInterruptException e) {
-					// TODO Auto-generated catch block
 					e.printStackTrace();
 				}
 				
