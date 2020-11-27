@@ -30,7 +30,7 @@ dependencies {
     testImplementation 'junit:junit:4.12'
     
     implementation files('lib/util-1.12.jar')
-    implementation files('lib/MVCTemplate-R16.jar')
+    implementation files('lib/MVCTemplate-R17.jar')
 }
 
 test {
